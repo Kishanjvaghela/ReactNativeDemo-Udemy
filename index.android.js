@@ -13,8 +13,16 @@ import {
   Image
 } from 'react-native';
 
-export default class AwesomeProject extends Component {
-  
+
+class CustomText extends Component{
+  render(){
+    return (
+        <Text>Hello {this.props.name}!</Text>
+    );
+  }
+}
+
+export default class AwesomeProject extends Component {  
 
   render() {
 
@@ -35,6 +43,7 @@ export default class AwesomeProject extends Component {
           Shake or press menu button for dev menu
         </Text>
         <Image source={pic} style={{width: 193, height: 110}}/>
+        <CustomText name='Kishan'/>
       </View>
     );
   }
